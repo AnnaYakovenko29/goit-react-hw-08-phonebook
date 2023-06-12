@@ -7,7 +7,7 @@ import {
   fetchDeleteContact,
 } from '../../Redux/Contacts/contact-operations';
 
-export const ContactList = () => {
+const ContactList = () => {
   const isLoading = useSelector(store => store.contacts.isLoading);
   const dispatch = useDispatch();
   const contacts = useSelector(getAllContacts);
@@ -50,5 +50,5 @@ export const ContactList = () => {
   );
 };
 
-
+export default ContactList;
 

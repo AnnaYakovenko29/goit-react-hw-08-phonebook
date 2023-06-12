@@ -3,7 +3,7 @@ import {
   fetchAllContacts,
   fetchAddContact,
   fetchDeleteContact,
-} from '../Contacts/contact-operations.js';
+} from '../Contacts/contact-operations';
 
 const initialState = { items: [], isLoading: false, error: null };
 

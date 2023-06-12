@@ -2,7 +2,7 @@ import React from 'react';
 import { filterContacts } from '../../Redux/Filter/filter-slice';
 import { useDispatch } from 'react-redux';
 
-export const Filter = () => {
+const Filter = () => {
   const dispatch = useDispatch();
   const handleChange = value => dispatch(filterContacts(value));
 
@@ -19,3 +19,4 @@ export const Filter = () => {
   );
 };
 
+export default Filter;
