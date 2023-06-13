@@ -1,0 +1,30 @@
+.nav {
+    width: 100%;
+    border-bottom: 2px solid #bbbbbb;
+  }
+
+.navbar-list {
+display: flex;
+gap: 40px;
+list-style: none;
+margin: 30px;
+}
+
+.navbar-item {
+    font-size: 26px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: black;
+    &.active {
+        color: red;
+      }
+
+}
+.navbar-link:hover,
+navbar-link:focus-visible {
+  text-decoration: underline;
+}

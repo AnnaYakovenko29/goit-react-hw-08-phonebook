@@ -1,10 +1,9 @@
-import LoginForm from '../LoginForm/LoginForm';
+import LoginForm from '../components/LoginForm/LoginForm';
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import { isUserLogin } from '../../Redux/auth/auth-selectors';
-import { login } from '../../Redux/auth/auth-operations';
-
-// import css from './loginPage.module.scss';
+import { isUserLogin } from '../Redux/auth/auth-selectors';
+import { login } from '../Redux/auth/auth-operations';
+import './LoginPage.css'
 
 const LoginPage = () => {
   const isLogin = useSelector(isUserLogin);
@@ -19,7 +18,7 @@ const LoginPage = () => {
   }
   return (
     <div>
-      <h1>Login</h1>
+      <h1 className='title-page'>Login</h1>
       <LoginForm onSubmit={handleLogin} />
     </div>
   );

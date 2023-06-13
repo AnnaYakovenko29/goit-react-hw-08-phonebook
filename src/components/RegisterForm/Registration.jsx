@@ -1,8 +1,11 @@
-import InputField from '../../Redux/shared/components/InputField';
-import useForm from '../../Redux/shared/useForm';
+import InputField from '../../shared/components/InputField';
+import useForm from '../../shared/hooks/useForm';
 import initialState from './initialState';
 import fields from './fields';
-import Button from '../../Redux/shared/components/Button';
+import Button from '../../shared/components/Button';
+import PropTypes from 'prop-types';
+import './Registration.css'
+
 const Registration = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
     initialState,
@@ -10,7 +13,7 @@ const Registration = ({ onSubmit }) => {
   });
   const { name, password, email } = state;
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='registration-form' onSubmit={handleSubmit}>
       <InputField value={name} onChange={handleChange} {...fields.name} />
       <InputField value={email} onChange={handleChange} {...fields.email} />
       <InputField
@@ -18,8 +21,12 @@ const Registration = ({ onSubmit }) => {
         onChange={handleChange}
         {...fields.password}
       />
-      <Button>Register now</Button>
+      <Button className=''>Register now</Button>
     </form>
   );
 };
 export default Registration;
+
+Registration.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

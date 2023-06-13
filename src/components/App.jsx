@@ -10,9 +10,9 @@ import NavBar from './NavBar/NavBar';
 
 const PrivateRoute = lazy(() => import('./PrivateRoute/PrivateRoute'));
 const PublicRoute = lazy(() => import('./PablicRoute/PublicRoute'));
-const LoginPage = lazy(() => import('./pages/LoginPage'));
-const RegisterPage = lazy(() => import('./pages/RegisterPage'));
-const ContactsPage = lazy(() => import('.//pages/ContactsPage'));
+const LoginPage = lazy(() => import('../pages/LoginPage'));
+const RegisterPage = lazy(() => import('../pages/RegisterPage'));
+const ContactsPage = lazy(() => import('../pages/ContactsPage'));
 
 const App = () => {
   return (

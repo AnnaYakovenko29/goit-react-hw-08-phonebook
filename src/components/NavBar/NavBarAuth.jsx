@@ -1,15 +1,17 @@
 import { NavLink } from 'react-router-dom';
+import './NavBarAuth.css'
+
 const NavBarAuth = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="login">
+    <nav className='nav'>
+      <ul className='navbar-list'>
+        <li className='navbar-item'>
+          <NavLink  className='navbar-link' to="login">
             Login
           </NavLink>
-        </li>
-        <li>
-          <NavLink to="registration">
+        </li >
+        <li className='navbar-item'>
+          <NavLink  className='navbar-link' to="registration">
             Registration
           </NavLink>
         </li>

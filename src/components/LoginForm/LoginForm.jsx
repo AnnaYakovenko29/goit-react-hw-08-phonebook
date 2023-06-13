@@ -1,8 +1,10 @@
-import InputField from '../../Redux/shared/components/InputField';
-import useForm from '../../Redux/shared/useForm';
-import Button from '../../Redux/shared/components/Button';
+import InputField from '../../shared/components/InputField';
+import useForm from '../../shared/hooks/useForm';
+import Button from '../../shared/components/Button';
 import fields from './fields';
 import initialState from './initialState';
+import PropTypes from 'prop-types';
+import './LoginForm.css';
 
 const LoginForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
@@ -11,7 +13,7 @@ const LoginForm = ({ onSubmit }) => {
   });
   const { email, password } = state;
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='loginform-form' onSubmit={handleSubmit}>
       <InputField value={email} onChange={handleChange} {...fields.email} />
       <InputField
         value={password}
@@ -23,3 +25,7 @@ const LoginForm = ({ onSubmit }) => {
   );
 };
 export default LoginForm;
+
+LoginForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

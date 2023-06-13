@@ -1,6 +1,6 @@
-import Form from '../ContactForm/ContactForm';
-import Filter from '../Filter/Filter';
-import ContactList from '../ContactList/ContactList';
+import Form from '../components/ContactForm/ContactForm';
+import Filter from '../components/Filter/Filter';
+import ContactList from '../components/ContactList/ContactList';
 
 const ContactsPage = () => {
   return (
